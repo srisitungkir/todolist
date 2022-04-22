@@ -34,11 +34,6 @@ app.put('/api/todos/:id', function(req, res) {
 
     if ( id in data) {
         const text = req.body.text;
-        // if ( text == undefined || text == "") {
-        //     data[id] = {
-        //         text : text
-        //     }
-        // }
         
         if ( text == undefined || text == "") {
             res.status(400).send("Failed Updated. Text is empty")
